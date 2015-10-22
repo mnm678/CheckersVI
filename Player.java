@@ -1,1 +1,2 @@
-mbvmnbv
+public class Player
+{}
