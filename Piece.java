@@ -55,7 +55,7 @@ public class Piece
     */
     public void move(char Xval, int Yval)
     {
-        convertMove(char Xval, int Yval)
+        convertMove(Xval, Yval);
     }
 
     private void convertMove(char Xval, int Yval)
