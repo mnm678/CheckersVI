@@ -1,4 +1,4 @@
-import java.awt.Point;
+import java.awt.Piece;
 import java.util.LinkedList;
 
  
@@ -15,11 +15,11 @@ public class Board
 	//1
 	//y
 	
-	private int grid[][];
+	private Piece grid[][];
 	private static Board instance = null;
 	protected Board()
 	{
-		this.grid = new int[8][8];
+		this.grid = new Piece[8][8];
 	}
 	
 	public static Board getInstance()
@@ -28,9 +28,9 @@ public class Board
 			instance = new Board();
 		return instance;
 	}
-	public LinkedList<Point>initalPieces(COLOR color) 
+	public LinkedList<Piece>initalPieces(COLOR color) 
 	{
-		LinkedList<Point> initalList = new LinkedList<Point>();
+		LinkedList<Piece> initalList = new LinkedList<Piece>();
 		if(color.equals(color.RED))
 		{
 			
@@ -41,12 +41,12 @@ public class Board
 					if(y%2==0 && x%2==0)
 					{
 						//System.out.println(x + " " + y);
-						initalList.add(new Point(x,y));
+						initalList.add(new Piece(color.RED, x, y));
 					}
 					else if(y%2==1 && x%2==1)
 					{
 						//System.out.println(x + " " + y);
-						initalList.add(new Point(x,y));
+						initalList.add(new Piece(color.RED, x, y));
 					}
 				}
 			}
@@ -58,9 +58,9 @@ public class Board
 				for(int x =0; x<8; x++)
 				{
 					if(y%2==0 && x%2==0)
-						initalList.add(new Point(x,y));
+						initalList.add(new Piece(color.BLACK, x,y));
 					else if(y%2==1 && x%2==1)
-						initalList.add(new Point(x,y));
+						initalList.add(new Piece(color.BLACK, x,y));
 				}
 			}
 		}
