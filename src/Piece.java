@@ -53,12 +53,12 @@ public class Piece
     2
     1
     */
-    public void move(char Xval, int Yval)
+    public void move(String Xval, int Yval)
     {
         convertMove(Xval, Yval);
     }
 
-    private void convertMove(char Xval, int Yval)
+    private void convertMove(String Xval, int Yval)
     {
         //convert char
         int newX = CheckersVI.xConvert.get(Xval);
